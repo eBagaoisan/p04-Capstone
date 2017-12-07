@@ -2,9 +2,9 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include "inventory.h"
 
 using namespace std;
-
 
 //Prototypes
 void oddPainting();
