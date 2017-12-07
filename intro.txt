@@ -1,0 +1,8 @@
+You wake up in the middle of a room.
+North of you is an odd painting.
+East of you is a Door.
+South of you is a Messy Desk.
+West of you is a Boarded up window.
+Find you're way out by interacting with objects.
+
+Enter the name of objects you would like to interact with.
