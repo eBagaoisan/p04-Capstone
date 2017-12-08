@@ -12,6 +12,9 @@ void window();
 void messyDesk();
 void door1();
 
+vector<string> inventory;
+string interaction;
+
 int main()
 {   
     //variables
@@ -19,6 +22,7 @@ int main()
     string intro;
     string printInventory;
     string partInventory;
+    string 
 
     //Intro-------------------------------------------------------
     
@@ -34,7 +38,6 @@ int main()
     introIFS.close();
 
     //Object Interaction-------------------------------------------
-    string interaction;
     bool room1 = true;
 
     cout<<"Enter the following to interact..."<<endl;
@@ -70,31 +73,87 @@ int main()
 
     void oddPainting()
     {
-        cout<<"its a painting"<<endl;
+         cout<<"You've walked over to the painting."<<endl;
+         cout<<"You notice a tear in the canvas..."<<endl;
+         cout<<"What would you like to do?\n"<<endl;
+         //add code for having/not having Razor; bool == true/false
+         
+         
     }
 
     //Boarded Window-----------------------------------------------
 
     void window()
     {
-        cout<<"its a boarded window"<<endl;
+        cout<<"You've walked over to the boarded up window."<<endl;
+        cout<<"You notice a glare on the window sill..."<<endl;
+        inventory.push_back("Lock Pick");
+        cout<<"\"Lock Pick\" is now in your inventory!"<<endl;
+        if (inventory.size()<1)
+        {
+            cout<<"To access inventory type \"inventory\"."<<endl;
+        }
     }
 
     //Messy Desk---------------------------------------------------
 
     void messyDesk()
     {
-        cout<<"its a dirty desk"<<endl;
+        cout<<"You've walked over to a messy desk."<<endl;
+        cout<<"You notice 2 drawers and a mysterious liquid on the desk."<<endl;
+        cout<<"Options:(C1)heck drawer 1\n\t(C2)heck drawer 2\n\t(I)nspect Liquid\n\t(E)xit"<<endl;
+        cout<<"What would you like to do?"<<endl;
+        cin>>interaction;
+
+        if (interaction == "c1" || interaction == "C1")
+        {
+            cout<<"Drawer is empty..."<<endl;
+        }
+        //---------------------------------------------------------------
+        else if (interaction == "c2" || interaction == "C2")
+        {
+            cout<<"You've found a Razor Blade!"<<endl;
+            inventory.push_back("Razor Blade");
+            cout<<"\"Razor Blade\" is now in your inventory!"<<endl;
+            if (inventory.size()<1)
+            {
+                cout<<"To access inventory type \"inventory\"."<<endl;
+            }
+        }
+        //---------------------------------------------------------------
+        else if (interaction == "I" || interaction == "i")
+        {
+            cout<<"You've grabbed the mysterious liquid."<<endl;
+            inventory.push_back("Mysterious Liquid");
+            cout<<"\"Mysterious Liquid\" is now in your inventory!"<<endl;
+            if (inventory.size()<1)
+            {
+                cout<<"To access inventory type \"inventory\"."<<endl;
+            }
+        }
+        //---------------------------------------------------------------
+        else if (interaction == "e" || interaction == "E")
+        {
+            cout<<"You've left the messy desk."<<endl;
+        }
+        else
+        {
+            cout<<"Invalid input, try again..."<<endl;
+        }
     }
 
     //Door 1-------------------------------------------------------
 
     void door1()
     {
-        cout<<"its a door"<<endl;
+        cout<<"You've walked over to the door."<<endl;
+        //input code to check inventory, if item is in inventory; bool = true
+        cout<<"Options:(O)pen door
+        cout<<"What would you like to do?"
     }
 
     //Inventory----------------------------------------------------
+    
 
 /*
     //Player inventory
