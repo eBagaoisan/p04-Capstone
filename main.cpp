@@ -22,7 +22,6 @@ int main()
     string intro;
     string printInventory;
     string partInventory;
-    string 
 
     //Intro-------------------------------------------------------
     
@@ -146,10 +145,45 @@ int main()
 
     void door1()
     {
+        bool lockPick = false;
         cout<<"You've walked over to the door."<<endl;
         //input code to check inventory, if item is in inventory; bool = true
-        cout<<"Options:(O)pen door
-        cout<<"What would you like to do?"
+        for (int r = 0; r < inventory.size(); r++)
+        {
+            if (inventory[r] == "Lock Pick")
+            {
+                lockPick = true;
+            }
+        }
+        if (lockPick == true)
+        {
+            cout<<"Options:(O)pen door\n\t(P)ick Lock\n\t(E)xit"<<endl;
+        }
+        else
+        {
+            cout<<"Options:(O)pen door\n\t(E)xit"<<endl;
+        }
+        cout<<"What would you like to do?"<<endl;
+        cin>>interaction;
+
+        if(interaction == "o" || interaction == "O")
+        {
+            cout<<"The door won't budge..."<<endl;
+            cout<<"You further inspect the lock to be loose."<<endl;
+        }
+        else if (interaction == "p" || interaction == "P")
+        {
+            cout<<"Attempt to use the Lockpick to loosen the lock"<<endl;
+            cout<<"You unlock the door and enter the next room..."<<endl;
+        }
+        else if (interaction == "e" || interaction == "E")
+        {
+            cout<<"You've left the door"<<endl;
+        }
+        else
+        {
+            cout<<"Invalid input, try again..."<<endl;
+        }
     }
 
     //Inventory----------------------------------------------------
