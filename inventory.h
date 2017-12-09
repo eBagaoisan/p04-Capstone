@@ -2,16 +2,23 @@
 #define _INVENTORY_H_
 
 #include <string>
+#include <vector>
 
 using namespace std;
 
-class inventory
+class Inventory
 {
-    //private:
-
+    private:
+      vector<string> inventory;
+      vector<string> inventoryList;
+      //string item;
+    //==============================================
     public:
-    void getInventory();
-    void open();
-    void close();
-    void use();
-}
+    vector<string> getInventory();
+    int getSize();
+    bool getItem(string );
+    void addItem(string );
+
+};
+
+#endif
